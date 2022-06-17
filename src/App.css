@@ -1,0 +1,42 @@
+.flex {
+  display: flex;
+}
+.App {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.nav-bar {
+  justify-content: center;
+  width: 100vw;
+}
+.nav-bar a {
+  color: #000000;
+  text-decoration: none;
+}
+/* div for characters to find */
+.characters {
+}
+/* div holding  */
+.play-area {
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+}
+.map-div {
+  width: 100%;
+}
+.grass-img,
+.fountain-img,
+.space-img {
+  width: 100%;
+}
+.selector {
+  padding: 10px;
+  margin-left: -10px;
+  margin-top: -10px;
+  color: #000000;
+  background-color: #f4f4f4;
+  position: absolute;
+  z-index: 2;
+}
