@@ -24,6 +24,7 @@
   width: 65%;
 }
 .map-div {
+  justify-content: center;
   width: 100%;
 }
 .grass-img,
@@ -33,10 +34,15 @@
 }
 .selector {
   padding: 10px;
-  margin-left: -10px;
+  margin-left: 10px;
   margin-top: -10px;
   color: #000000;
   background-color: #f4f4f4;
   position: absolute;
   z-index: 2;
+}
+.selector-options:hover {
+  cursor: pointer;
+  color: #f4f4f4;
+  background-color: #000000;
 }
