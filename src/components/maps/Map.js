@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 const Map = (props) => {
   const { image, click, style, toggle, selection, kirby } = props;
   return (

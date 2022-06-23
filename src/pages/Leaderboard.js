@@ -1,5 +1,11 @@
-import { collection, getDocs, limit, query } from "firebase/firestore";
+import { collection, getDocs, limit, orderBy, query } from "firebase/firestore";
 import { useState } from "react";
+import {
+  faDroplet,
+  faLeaf,
+  faShuttleSpace,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import db from "../firebase/config";
 import mapOne from "../images/kirby.png";
 import mapTwo from "../images/kirby1.png";
@@ -12,7 +18,7 @@ const Leaderboard = () => {
   const populateBoard = async (e) => {
     const { id } = e.currentTarget;
     const leadRef = collection(db, "leaderboard");
-    const q = query(leadRef, limit(51));
+    const q = query(leadRef, orderBy("seconds", "desc"), limit(51));
     const mapRef = await getDocs(q);
     const points = [];
     mapRef.forEach((doc) => {
@@ -25,19 +31,25 @@ const Leaderboard = () => {
   };
   return (
     <div className="leaderboards">
-      <h2>Leaderboards</h2>
+      <h2>Leaderboards - Top 50</h2>
       <div className="image-maps-leaderboard flex">
         <div onClick={populateBoard} id="grass" className="maps-div-lb">
           <img className="maps-lb" src={mapOne} alt="kirby grass" />
-          <h3>Grass Map</h3>
+          <h3>
+            Grass Map - <FontAwesomeIcon icon={faLeaf} />
+          </h3>
         </div>
         <div onClick={populateBoard} className="maps-div-lb" id="fountain">
           <img className="maps-lb" src={mapTwo} alt="kirby fountain" />
-          <h3>Fountain Map</h3>
+          <h3>
+            Fountain Map - <FontAwesomeIcon icon={faDroplet} />
+          </h3>
         </div>
         <div onClick={populateBoard} className="maps-div-lb" id="space">
           <img className="maps-lb" src={mapThree} alt="kirby space" />
-          <h3>Space Map</h3>
+          <h3>
+            Space Map - <FontAwesomeIcon icon={faShuttleSpace} />
+          </h3>
         </div>
       </div>
       {populate ? (

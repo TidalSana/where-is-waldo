@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+
 // components
 import Nav from "./components/Nav";
 import Characters from "./components/Characters";
@@ -168,6 +171,15 @@ const App = () => {
             <Route path="/leaderboard" element={<Leaderboard />} />
           </Routes>
         </div>
+        <footer className="footer flex">
+          <p>
+            Made by <FontAwesomeIcon icon={faGithub} />
+            <a className="footer-link" href="https://github.com/TidalSana">
+              TidalSana
+            </a>
+            .2022
+          </p>
+        </footer>
       </div>
     </BrowserRouter>
   );

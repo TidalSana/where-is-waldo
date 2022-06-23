@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-
 // components
 import Map from "../components/maps/Map";
 import mapOne from "../images/kirby.png";
 import mapTwo from "../images/kirby1.png";
 import mapThree from "../images/kirby2.jpg";
-
+//css
+import "../styles/PlayArea.css";
 // Firebase
 // firestore cloud
 import { doc, getDoc } from "firebase/firestore";
@@ -87,6 +87,7 @@ const PlayArea = (props) => {
       }
     };
     checkCoord(coords.x, coords.y);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [character, coords.x, coords.y, level]);
   return (
     <div className={`play-area ${level}-area flex`}>
