@@ -1,6 +1,11 @@
 .flex {
   display: flex;
 }
+a {
+  color: black;
+  text-decoration: none;
+}
+/* base home area section */
 .App {
   justify-content: center;
   align-items: center;
@@ -12,24 +17,50 @@
 }
 .nav-bar a {
   color: #000000;
+  padding: 0;
   text-decoration: none;
 }
-/* div for characters to find */
-.characters {
+.title {
+  padding: 1.5em;
 }
-/* div holding  */
+.home {
+  flex-direction: column;
+}
+.leaderboard-path {
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1em;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.button-leaderboard {
+  align-self: flex-end;
+}
+.main-content {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* play-area */
+/* div holding maps*/
 .play-area {
   justify-content: center;
   align-items: center;
-  width: 65%;
+  margin: 0.5em;
+  padding: 1.5em;
+  width: 65vw;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 .map-div {
   justify-content: center;
   width: 100%;
+  margin-bottom: 1.5em;
 }
-.grass-img,
-.fountain-img,
-.space-img {
+.play-map-img {
+  border-radius: 1%;
   width: 100%;
 }
 .selector {
@@ -45,4 +76,61 @@
   cursor: pointer;
   color: #f4f4f4;
   background-color: #000000;
+}
+
+.win-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.win-modal {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #f4f4f4;
+  padding: 1.2em;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.win-modal form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.win-buttons {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 1em;
+}
+
+/* media queries */
+@media screen and (max-width: 1280px) {
+  .home {
+    width: 50vw;
+  }
+}
+@media screen and (min-height: 1080px) {
+  .win-modal {
+    top: 20%;
+    transform: translate(-50%, -30%);
+  }
+}
+@media screen and (min-width: 2000px) {
+  .main-content {
+    flex-direction: row;
+    width: 70vw;
+  }
+  .home {
+    width: 100vw;
+    flex-wrap: wrap;
+  }
+  .characters {
+    width: fit-content;
+    flex-direction: column;
+  }
+  .image-container {
+    flex-direction: column;
+  }
 }

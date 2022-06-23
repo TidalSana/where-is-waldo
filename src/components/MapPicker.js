@@ -7,12 +7,15 @@ import "../styles/MapPicker.css";
 const MapPicker = (props) => {
   const { changeMap } = props;
   return (
-    <div className="image-maps flex">
-      <Link to="play">
+    <Link to="play">
+      <div className="image-maps flex">
         <div className="maps-div" onClick={changeMap}>
+          <h3>Grass Map</h3>
           <img className="maps" id="grass" src={mapOne} alt="kirby grass" />
         </div>
         <div className="maps-div" onClick={changeMap}>
+          <h3>Fountain Map</h3>
+
           <img
             className="maps"
             id="fountain"
@@ -21,10 +24,12 @@ const MapPicker = (props) => {
           />
         </div>
         <div className="maps-div" onClick={changeMap}>
+          <h3>Space Map</h3>
+
           <img className="maps" id="space" src={mapThree} alt="kirby space" />
         </div>
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 };
 

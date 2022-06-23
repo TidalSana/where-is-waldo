@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
 
 // components
-import Grass from "../components/maps/Grass";
-import Fountain from "../components/maps/Fountain";
-import Space from "../components/maps/Space";
+import Map from "../components/maps/Map";
 import mapOne from "../images/kirby.png";
 import mapTwo from "../images/kirby1.png";
 import mapThree from "../images/kirby2.jpg";
@@ -14,7 +12,7 @@ import { doc, getDoc } from "firebase/firestore";
 import db from "../firebase/config";
 
 const PlayArea = (props) => {
-  const { level } = props;
+  const { level, found, kirby } = props;
   // open or close box
   const [click, setClick] = useState(false);
   // for styling of selector
@@ -34,7 +32,7 @@ const PlayArea = (props) => {
     top: mousePos.y,
   };
   const getClick = (e) => {
-    const { width, height } = e.target.getBoundingClientRect();
+    // const { width, height } = e.target.getBoundingClientRect();
     const { offsetX, offsetY } = e.nativeEvent;
 
     const realX = Math.round(
@@ -80,10 +78,9 @@ const PlayArea = (props) => {
           yCoord >= yKirbyUp &&
           yCoord <= yKirbyDown
         ) {
-          console.log("within");
+          found(character);
           return true;
         }
-        console.log("not within");
         return false;
       } catch (error) {
         console.log("No Character Defined yet");
@@ -94,18 +91,41 @@ const PlayArea = (props) => {
   return (
     <div className={`play-area ${level}-area flex`}>
       {level === "grass" ? (
-        <Grass
+        <Map
           image={mapOne}
           click={getClick}
           style={style}
           toggle={click}
           selection={getCharacter}
+          kirby={kirby}
         />
       ) : (
         ""
       )}
-      {level === "fountain" ? <Fountain image={mapTwo} click={getClick} /> : ""}
-      {level === "space" ? <Space image={mapThree} click={getClick} /> : ""}
+      {level === "fountain" ? (
+        <Map
+          image={mapTwo}
+          click={getClick}
+          style={style}
+          toggle={click}
+          selection={getCharacter}
+          kirby={kirby}
+        />
+      ) : (
+        ""
+      )}
+      {level === "space" ? (
+        <Map
+          image={mapThree}
+          click={getClick}
+          style={style}
+          toggle={click}
+          selection={getCharacter}
+          kirby={kirby}
+        />
+      ) : (
+        ""
+      )}
     </div>
   );
 };

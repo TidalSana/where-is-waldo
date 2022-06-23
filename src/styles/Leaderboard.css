@@ -1,0 +1,71 @@
+.leaderboards {
+  margin: 1em;
+  padding: 0.5em;
+  border-radius: 1%;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.leaderboards {
+  width: 95%;
+}
+.leaderboards > h2 {
+  margin-left: 0.5rem;
+}
+.image-maps-leaderboard {
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+.maps-div-lb {
+  width: 50%;
+  height: 5%;
+  margin: 1em;
+  padding: 1em;
+}
+.maps-div-lb {
+  transition: 0.1s ease-in;
+  border-radius: 3%;
+}
+.maps-lb {
+  height: 100%;
+  width: 100%;
+  border-radius: 3%;
+}
+.maps-div-lb:hover {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  cursor: pointer;
+}
+.headers {
+  background: #1f1b26;
+  color: #f4f4f4;
+}
+.score-table th,
+.score-table td {
+  padding: 12px 15px;
+}
+.score-table tbody tr {
+  border-bottom: 0.1px solid #dddddd;
+}
+.score-table tbody tr:nth-of-type(even) {
+  background-color: #e6e6e6;
+  color: #1f1b26;
+}
+.score-time {
+  text-align: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 680px) {
+  .home {
+    width: 90vw;
+  }
+  .leaderboards > * {
+    font-size: 0.9rem;
+  }
+  .image-maps-leaderboard {
+    flex-wrap: wrap;
+  }
+  .maps-div-lb {
+    width: 30%;
+  }
+}
