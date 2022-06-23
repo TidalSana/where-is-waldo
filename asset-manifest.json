@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/where-is-waldo/static/css/main.b59a6a3a.css",
-    "main.js": "/where-is-waldo/static/js/main.cfd6479f.js",
+    "main.js": "/where-is-waldo/static/js/main.1f8e5d10.js",
     "static/media/kirby1.png": "/where-is-waldo/static/media/kirby1.fb449d5fa4a9cd5edf05.png",
     "static/media/kirby.png": "/where-is-waldo/static/media/kirby.f7db2bc29e3fe0f39f1c.png",
     "static/media/staffKirby.png": "/where-is-waldo/static/media/staffKirby.92d12cee7dc9cc856a24.png",
@@ -14,10 +14,10 @@
     "static/media/ufoKirby.png": "/where-is-waldo/static/media/ufoKirby.033b65483ae8c6b03a86.png",
     "index.html": "/where-is-waldo/index.html",
     "main.b59a6a3a.css.map": "/where-is-waldo/static/css/main.b59a6a3a.css.map",
-    "main.cfd6479f.js.map": "/where-is-waldo/static/js/main.cfd6479f.js.map"
+    "main.1f8e5d10.js.map": "/where-is-waldo/static/js/main.1f8e5d10.js.map"
   },
   "entrypoints": [
     "static/css/main.b59a6a3a.css",
-    "static/js/main.cfd6479f.js"
+    "static/js/main.1f8e5d10.js"
   ]
 }
