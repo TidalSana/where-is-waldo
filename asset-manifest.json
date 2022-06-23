@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/where-is-waldo/static/css/main.b59a6a3a.css",
+    "main.js": "/where-is-waldo/static/js/main.f54d1965.js",
+    "static/media/kirby1.png": "/where-is-waldo/static/media/kirby1.fb449d5fa4a9cd5edf05.png",
+    "static/media/kirby.png": "/where-is-waldo/static/media/kirby.f7db2bc29e3fe0f39f1c.png",
+    "static/media/staffKirby.png": "/where-is-waldo/static/media/staffKirby.92d12cee7dc9cc856a24.png",
+    "static/media/spiderKirby.png": "/where-is-waldo/static/media/spiderKirby.4957b4620a36eefae989.png",
+    "static/media/paintKirby.png": "/where-is-waldo/static/media/paintKirby.1608ef7cce210238e4b1.png",
+    "static/media/kirby2.jpg": "/where-is-waldo/static/media/kirby2.02c10591ce347212a5ca.jpg",
+    "static/media/starKirby.png": "/where-is-waldo/static/media/starKirby.e58868344409fbca92d5.png",
+    "static/media/sleepKirby.png": "/where-is-waldo/static/media/sleepKirby.97088f590ec1b511999f.png",
+    "static/media/qdKirby.png": "/where-is-waldo/static/media/qdKirby.80fe31ed6de6eecfa460.png",
+    "static/media/ufoKirby.png": "/where-is-waldo/static/media/ufoKirby.033b65483ae8c6b03a86.png",
+    "index.html": "/where-is-waldo/index.html",
+    "main.b59a6a3a.css.map": "/where-is-waldo/static/css/main.b59a6a3a.css.map",
+    "main.f54d1965.js.map": "/where-is-waldo/static/js/main.f54d1965.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b59a6a3a.css",
+    "static/js/main.f54d1965.js"
+  ]
+}
