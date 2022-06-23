@@ -146,7 +146,7 @@ const App = () => {
     }
   }, [found]);
   return (
-    <BrowserRouter basename="/where-is-waldo">
+    <BrowserRouter basename="/">
       <div className="App flex">
         <Nav reset={resetAbility} />
         <div className="main-content flex">
